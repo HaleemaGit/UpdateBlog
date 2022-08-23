@@ -2,7 +2,7 @@ import axios from "axios";
 import * as React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { toast } from 'react-hot-toast';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 type FormData = {
   title: string;
@@ -13,7 +13,7 @@ type FormData = {
 export default function BlogForm() {
   const router = useRouter();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
-  const onSubmit = async (data) => {
+  const onSubmit = async (data:any) => {
     let toastId;
     toastId = toast.loading("Submitting post....")
     try {

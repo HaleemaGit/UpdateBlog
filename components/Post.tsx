@@ -24,7 +24,10 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
       <h2>{post.title}</h2>
       {/* <small>By {authorName}</small> */}
       <ReactMarkdown children={post.description} />
-      <button type="button" className="btn btn-danger mr-1">
+      <button type="button" className="edit btn btn-danger mr-1">
+          Edit
+        </button>
+        <button type="button" className="delete btn btn-danger mr-1">
           Delete
         </button>
       <style jsx>{`
